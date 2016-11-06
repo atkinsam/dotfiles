@@ -1,3 +1,5 @@
+" vim config
+
 set nocompatible
 
 set rtp+=~/.vim/bundle/Vundle.vim
