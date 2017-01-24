@@ -18,9 +18,13 @@ Plugin 'flazz/vim-colorschemes'
 Plugin 'https://github.com/jiangmiao/auto-pairs'
 Plugin 'https://github.com/scrooloose/syntastic'
 Plugin 'https://github.com/petRUShka/vim-opencl'
+Plugin 'https://github.com/scrooloose/nerdtree'
+Plugin 'Xuyuanp/nerdtree-git-plugin'
 Plugin 'christoomey/vim-tmux-navigator'
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'rdnetto/YCM-Generator'
+Plugin 'tpope/vim-fugitive'
+Plugin 'https://github.com/airblade/vim-gitgutter'
 
 Bundle 'Powerline/powerline', {'rtp': 'powerline/bindings/vim/'}
 
@@ -36,6 +40,7 @@ filetype plugin indent on
 " Non-plugin commands go below this line
 " ======================================
 
+set nowrap
 set encoding=utf-8
 set t_Co=256
 set fillchars+=stl:\ ,stlnc:\
@@ -54,7 +59,11 @@ let g:airline_theme='distinguished'
 set directory^=$HOME/.vim/tmp//
 set colorcolumn=80
 set t_ut=
+map <C-n> :NERDTreeToggle<CR>
 
+" Associate GL files with C syntax
+au BufRead,BufNewFile *.fragmentshader set filetype=c
+au BufRead,BufNewFile *.vertexshader set filetype=c
 
 " Enable syntastic
 set statusline+=%#warningmsg#
