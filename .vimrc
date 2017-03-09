@@ -25,6 +25,7 @@ Plugin 'Valloric/YouCompleteMe'
 Plugin 'rdnetto/YCM-Generator'
 Plugin 'tpope/vim-fugitive'
 Plugin 'https://github.com/airblade/vim-gitgutter'
+Plugin 'octol/vim-cpp-enhanced-highlight'
 
 Bundle 'Powerline/powerline', {'rtp': 'powerline/bindings/vim/'}
 
@@ -53,7 +54,7 @@ syntax on
 set tabstop=4
 set shiftwidth=4
 set expandtab
-colorscheme railscasts
+colorscheme neverland
 set guifont=Cousine\ for\ Powerline
 let g:airline_theme='distinguished'
 set directory^=$HOME/.vim/tmp//
