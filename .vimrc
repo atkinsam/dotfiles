@@ -56,7 +56,8 @@ set shiftwidth=4
 set expandtab
 colorscheme neverland
 set guifont=Cousine\ for\ Powerline
-let g:airline_theme='distinguished'
+let g:airline_theme='jellybeans'
+let g:airline#extensions#whitespace#enabled=0
 set directory^=$HOME/.vim/tmp//
 set colorcolumn=80
 set t_ut=
