@@ -11,6 +11,9 @@ export ZSH=$HOME/.oh-my-zsh
 
 export TERM="xterm-256color"
 
+DISABLE_AUTO_TITLE="true"
+printf "\033];%s\07\n" " "
+
 ZSH_THEME="gitster/gitster"
 plugins=(git)
 
