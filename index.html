@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>start</title>
+    </head>
+
+    <body bgcolor="#2e4975">
+		<div style="position: absolute; top: 10px; bottom: 10px; width: 98.5%;">
+        	<div id="container" style="position: absolute; top: 50%; left: 50%; transform: translateX(-50%) translateY(-50%);">
+				<h1 id="time" style="font-size: 3.0em; font-family: 'Courier New', Monospace">TIME</h1>
+			</div>
+		</div>
+    </body>
+
+    <script>
+	function checkTime(i) {
+		if (i < 10) {
+			i = "0" + i;
+		}
+		return i;
+	}
+	function startTime() {
+		var today = new Date();
+		var pm = false;
+		var timestr = "";
+		var h = today.getHours();
+		var m = today.getMinutes();
+		m = checkTime(m);
+		if (h > 12) {
+			h = h - 12;
+			pm = true;
+		}
+		timestr += h + ':' + m;
+		if (pm) {timestr += ' PM';}
+		else {timestr += ' AM';}
+		document.getElementById('time').innerHTML = timestr;
+		t = setTimeout(function() {
+			startTime()
+		}, 5000);
+	}
+	startTime();
+    </script>
+
+
+</html>
+
